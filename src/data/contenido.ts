@@ -7,7 +7,7 @@ export const CONTACTO = {
 };
 
 export const PILARES = [
-  { ico: '🌸', t: 'Reiki', c: 'pilar', d: 'Imposición de manos y intención amorosa para favorecer la relajación profunda. El Reiki se practica como terapia complementaria: la evidencia disponible apunta a efectos moderados en dolor y ansiedad, siempre junto a la atención médica.' },
+  { ico: '🌊', t: 'Método Yujuen', c: 'pilar', d: 'La base de todo el procedimiento. Se trabaja con presencia sostenida, silencio y atención plena: nadie empuja, nada se fuerza. De ahí se derivan la inducción personal y la lectura energética de cada persona.' },
   { ico: '🌀', t: 'Inducción personal', c: 'pilar j', d: 'Tu propia voz te guía: respiración, imaginería y frases que tú reconoces como tuyas. Nada de guiones ajenos. La inducción se adapta a tu historia y a tu ritmo.' },
   { ico: '✨', t: 'Lenguaje cuántico', c: 'pilar c', d: 'Hablamos de partículas enlazadas y de lo que se mantiene conectado a la distancia como metáfora de vínculo y presencia. No afirmamos que la física cuántica cure: afirmamos que nombrar la conexión ayuda a sostenerla.' },
 ];
@@ -17,7 +17,7 @@ export const FASES = [
   { t: 'Cuestionario de primer encuentro', d: 'Treinta preguntas para conocer tu malestar, tu estado actual, tus creencias y el motivo real por el que quieres empezar. Se responde en línea o en el consultorio.' },
   { t: 'Pre-aprobación y aprobación', d: 'El acompañante revisa tu cuestionario y la Lic. Dra. Rosa Patricia Alvarado Moreno da la aprobación final. No toda persona ni todo momento son adecuados para este trabajo, y eso es parte del cuidado.' },
   { t: 'Consentimiento paso por paso', d: 'Antes de cada fase se te pregunta si estás de acuerdo. Si dices no, se detiene. Se te explica qué sigue, qué puedes sentir y cómo salir si lo necesitas.' },
-  { t: 'Inducción y acompañamiento', d: 'Voz guiada, Reiki y silencio sostenido. Observamos y anotamos tus respuestas involuntarias: respiración, calor, hormigueo, emoción, tensión que se suelta.' },
+  { t: 'Inducción y acompañamiento', d: 'Voz guiada, presencia Yujuen y silencio sostenido. Observamos y anotamos tus respuestas involuntarias: respiración, calor, hormigueo, emoción, tensión que se suelta.' },
   { t: 'Cierre y seguimiento', d: 'Te vas con lo que sentiste por escrito y con una pauta de cuidado para cuarenta y ocho horas. Se agenda seguimiento a los tres días.' },
 ];
 
@@ -27,7 +27,7 @@ export const SESIONES = [
     precio: '$600',
     dur: '60 minutos · en línea o a distancia',
     dest: false,
-    incluye: ['Cuestionario de primer encuentro', 'Inducción guiada en vivo', 'Reiki a distancia con tu permiso', 'Nota de cierre con lo observado'],
+    incluye: ['Cuestionario de primer encuentro', 'Inducción guiada en vivo', 'Presencia Yujuen a distancia con tu permiso', 'Nota de cierre con lo observado'],
     no: 'No incluye seguimiento posterior ni sesiones adicionales.',
   },
   {
@@ -35,15 +35,15 @@ export const SESIONES = [
     precio: '$900',
     dur: '90 minutos + 2 seguimientos',
     dest: true,
-    incluye: ['Todo lo de Armonización', 'Inducción personal escrita para tu caso', 'Reiki presencial o a distancia extendido', 'Dos mensajes de seguimiento en 72 horas', 'Ejercicios de respiración para casa'],
+    incluye: ['Todo lo de Armonización', 'Inducción personal escrita para tu caso', 'Presencia Yujuen extendida, presencial o a distancia', 'Dos mensajes de seguimiento en 72 horas', 'Ejercicios de respiración para casa'],
     no: 'No incluye acompañamiento continuo por meses.',
   },
   {
     n: 'Programa Convergencia',
     precio: '$1,200',
-    dur: 'Tres sesiones de 60 min · un mes',
+    dur: 'Cuatro sesiones de 60 min · un mes',
     dest: false,
-    incluye: ['Tres encuentros completos', 'Inducción personalizada que evoluciona contigo', 'Acompañamiento por WhatsApp entre sesiones', 'Cuestionario de cierre y comparativa de tu estado inicial', 'Pauta de cuidado para el mes'],
+    incluye: ['Cuatro encuentros completos', 'Inducción personalizada que evoluciona contigo', 'Acompañamiento por WhatsApp entre sesiones', 'Cuestionario de cierre y comparativa de tu estado inicial', 'Pauta de cuidado para el mes'],
     no: 'No incluye atención de urgencias ni intervención en tratamientos médicos.',
   },
 ];
@@ -64,7 +64,7 @@ export const PREGUNTAS: { bloque: string; items: string[] }[] = [
     '¿Cómo vives el estrés o la ansiedad?', '¿Tomas medicamentos o estás en algún tratamiento? ¿Cuál?',
   ]},
   { bloque: '4. Creencias y espiritualidad', items: [
-    '¿Crees que existe algo que llamamos energía?', '¿Has practicado Reiki, meditación, yoga u otra disciplina?',
+    '¿Crees que existe algo que llamamos energía?', '¿Has practicado meditación, yoga, Reiki u otra disciplina de atención?',
     '¿Practicas alguna religión o espiritualidad?', '¿Qué significa para ti sanar?',
     '¿Qué te daría miedo de este proceso?', '¿Qué necesitas saber antes de empezar?',
   ]},

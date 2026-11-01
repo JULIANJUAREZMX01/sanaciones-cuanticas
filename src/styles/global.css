@@ -104,3 +104,8 @@ footer li{margin-bottom:.35rem}
 .bloqueq{background:#fff;border:1px solid var(--linea);border-radius:18px;padding:1.3rem;margin-bottom:1rem}
 .bloqueq h3{color:var(--rosa);margin-top:0}
 @media(max-width:820px){.hero-grid,.creadora{grid-template-columns:1fr}footer .fg{grid-template-columns:1fr}}
+
+.orn{text-align:center;color:var(--cempasuchil);letter-spacing:1.2em;margin:2.6rem 0 0;font-size:.9rem;opacity:.85}
+@media (min-width:900px){.orn{margin-top:3.4rem}}
+.pilar h3{font-size:1.35rem}
+.lead{font-size:1.09rem;line-height:1.72}
