@@ -1,0 +1,43 @@
+---
+import Base from '@/layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base title="Video promocional · Sanaciones Cuánticas Energéticas" description="Video de 24 segundos del Método Convergencia: qué es, cómo se trabaja y cómo agendar una sesión.">
+  <main class="wrap">
+    <section class="hero" style="padding-bottom:1rem">
+      <p class="kicker">Video promocional · 24 segundos</p>
+      <h1>Para compartir, no para explicar</h1>
+      <p class="lead">Vertical 9:16, listo para Reels, TikTok, estados de WhatsApp y Facebook. Todo termina en el mismo punto: escanear y agendar.</p>
+    </section>
+
+    <section style="max-width:420px;margin:0 auto">
+      <video src={`${base}/video/promo.mp4`} controls playsinline poster={`${base}/img/hero.webp`} style="width:100%;border-radius:18px;box-shadow:0 24px 60px rgba(43,26,32,.18)"></video>
+      <p class="nota" style="text-align:center;margin-top:.8rem">24 s · 1080×1920 · sin audio: se ve sin sonido y se entiende</p>
+    </section>
+
+    <section class="bloque">
+      <h2>Cómo usarlo</h2>
+      <div class="grid3">
+        <article class="card"><h3>1. Publica</h3><p>Reels y TikTok con el texto en pantalla: ya está quemado, no necesitas subtítulos. En WhatsApp, mándalo como estado o directo al chat del prospecto.</p></article>
+        <article class="card"><h3>2. Responde</h3><p>Quien escanea cae en la página de cita con etiqueta del video. Ahí elige WhatsApp, llamada o el cuestionario de 30 preguntas.</p></article>
+        <article class="card"><h3>3. Mide</h3><p>Todos los escaneos llegan con utm_source=video, así sabrás cuántas citas vienen del video y cuántas de la calle.</p></article>
+      </div>
+    </section>
+
+    <section class="bloque">
+      <h2>El embudo completo</h2>
+      <ol class="pasos">
+        <li><b>Video</b> — 24 segundos: dolor, método, precio y QR</li>
+        <li><b>Página de cita</b> — informa, resuelve dudas y ofrece las cuatro vías de contacto</li>
+        <li><b>Cuestionario de 30 preguntas</b> — filtra y prepara la sesión</li>
+        <li><b>Pre-aprobación</b> — se descarta lo que no corresponde antes de ocupar agenda</li>
+        <li><b>Sesión y seguimiento</b> — 90 minutos, una por semana</li>
+      </ol>
+      <p class="cta-row">
+        <a class="btn" href={`${base}/cita/`}>Ir a la página de cita</a>
+        <a class="btn ghost" href={`${base}/cuestionario/`}>Ver el cuestionario</a>
+      </p>
+      <p class="nota">Descarga el archivo original: <a href={`${base}/video/promo.mp4`}>promo.mp4</a> · guion visual: <a href={`${base}/video/storyboard.png`}>storyboard.png</a></p>
+    </section>
+  </main>
+</Base>

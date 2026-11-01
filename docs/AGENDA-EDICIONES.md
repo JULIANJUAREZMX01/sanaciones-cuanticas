@@ -31,3 +31,12 @@ Este archivo es el tablero de trabajo del sitio. Cada edición se registra aquí
 2. El copy no promete curación médica; se mantiene la fórmula de consentimiento informado y acompañamiento.
 3. Ninguna edición publica datos de contacto, precios o credenciales sin confirmación previa.
 4. Cada lote termina con `npm run check`, build y verificación de las rutas en vivo.
+
+## Lote 3 · Video promocional y embudo (1 nov 2026) — APLICADO
+
+| # | Edición | Estado |
+|---|---|---|
+| 14 | Video vertical 1080x1920 de 24 s con guion en 8 escenas: gancho, problema, método, honestidad, autora, precios, QR y cierre | Hecho |
+| 15 | QR del video apunta a /cita/ con utm_source=video para medir el origen de cada cita | Hecho |
+| 16 | Página /video/ con reproductor, instrucciones de publicación y embudo completo | Hecho |
+| 17 | Archivo descargable promo.mp4 y storyboard.png en /public/video/ | Hecho |
