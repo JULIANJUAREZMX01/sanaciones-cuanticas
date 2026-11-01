@@ -1,0 +1,45 @@
+---
+import Base from '@/layouts/Base.astro';
+import { SESIONES, CONTACTO } from '@/data/contenido.ts';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base title="Sesiones y aportaciones · Sanaciones Cuánticas Energéticas" description="Tres sesiones: Armonización $600, Sesión profunda $900 y Programa Convergencia $1,200. En línea, a distancia y presencial.">
+  <section class="bloque" style="padding-top:clamp(1.6rem,4vw,3rem)">
+    <div class="wrap">
+      <p class="kicker">Sesiones</p>
+      <h1>Tres formas de entrar al proceso</h1>
+      <p class="lead" style="max-width:42rem">Todas incluyen la entrevista inicial y el consentimiento por fases. La diferencia está en la profundidad de la inducción y en el acompañamiento posterior.</p>
+    </div>
+  </section>
+  <section class="bloque">
+    <div class="wrap">
+      <div class="precios">
+        {SESIONES.map((s) => (
+          <article class={`paq${s.dest ? ' dest' : ''}`}>
+            {s.dest && <span class="tag">La más elegida</span>}
+            <h3>{s.n}</h3>
+            <p class="precio">{s.precio}</p>
+            <p class="dur">{s.dur}</p>
+            <ul>{s.incluye.map((i) => <li>{i}</li>)}</ul>
+            <p class="no">{s.no}</p>
+            <a class="btn btn-pri" style="width:100%;justify-content:center;margin-top:.8rem" href={`${CONTACTO.whatsapp}?text=${encodeURIComponent('Hola, quiero agendar la sesión ' + s.n + '.')}`}>Reservar</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="bloque">
+    <div class="wrap">
+      <h2>Qué incluye siempre, en las tres</h2>
+      <div class="grid3" style="margin-top:1rem">
+        <article class="card"><h3>Entrevista de primer encuentro</h3><p>Sin costo, por videollamada o en el consultorio.</p></article>
+        <article class="card"><h3>Consentimiento por fase</h3><p>Se pregunta antes de avanzar. Tu no se respeta.</p></article>
+        <article class="card"><h3>Nota de cierre</h3><p>Lo observado durante la sesión, por escrito.</p></article>
+      </div>
+      <div class="disclaimer" style="margin-top:1.4rem">
+        Aportaciones en pesos mexicanos. No hay cargos ocultos ni cobros automáticos. Las sesiones no incluyen diagnóstico médico ni sustituyen tratamiento.
+      </div>
+      <p style="margin-top:1.2rem"><a href={`${base}/cita/`}>Ver formas de agendar y ubicación →</a></p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,135 @@
+---
+import Base from '@/layouts/Base.astro';
+import { CONTACTO, PILARES, FASES, SESIONES, FAQ } from '@/data/contenido.ts';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base
+  title="Sanaciones Cuánticas Energéticas · Lic. Dra. Rosa Patricia Alvarado Moreno"
+  description="Método Convergencia: Reiki, inducción personal y presencia a distancia. Sesiones en línea y presenciales con consentimiento paso por paso."
+>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Método Convergencia · Reiki y presencia cuántica</p>
+        <h1>Donde el arte antiguo y la <em>mirada cuántica</em> se encuentran para acompañarte.</h1>
+        <p class="lead">Reiki, inducción personal y presencia sostenida. Un espacio donde tu cuerpo puede soltar lo que carga, escuchándote primero y preguntándote siempre antes de avanzar.</p>
+        <div class="btns">
+          <a class="btn btn-pri" href={CONTACTO.whatsappTexto}>Agendar por WhatsApp</a>
+          <a class="btn btn-sec" href={`${base}/cuestionario/`}>Responder las 30 preguntas</a>
+        </div>
+        <p class="autor">Creado y dirigido por <b>Lic. Dra. Rosa Patricia Alvarado Moreno</b>. Cada solicitud pasa por pre-aprobación y por su aprobación personal.</p>
+      </div>
+      <div class="hero-art">
+        <img src={`${base}/img/hero.webp`} alt="Dragón rosa y colibrí en estilo alebrije mexicano" width="1024" height="1024" />
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="wrap">
+      <p class="kicker" style="text-align:center">Tres artes que convergen</p>
+      <h2 style="text-align:center;max-width:34rem;margin-inline:auto">No es una técnica suelta: es una conversación entre disciplinas</h2>
+      <div class="grid3" style="margin-top:2rem">
+        {PILARES.map((p) => (
+          <article class={`card ${p.c}`}>
+            <span class="ico">{p.ico}</span>
+            <h3>{p.t}</h3>
+            <p>{p.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="wrap">
+      <p class="kicker">Cómo se trabaja</p>
+      <h2>Seis pasos, ningún atajo</h2>
+      <div class="fases">
+        {FASES.map((f) => (
+          <div class="fase"><div><h3>{f.t}</h3><p>{f.d}</p></div></div>
+        ))}
+      </div>
+      <p style="margin-top:1.2rem"><a href={`${base}/metodo/`}>Ver el método completo y su fundamento →</a></p>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="wrap">
+      <p class="kicker">Sesiones</p>
+      <h2>Tres puertas de entrada</h2>
+      <div class="precios" style="margin-top:1.6rem">
+        {SESIONES.map((s) => (
+          <article class={`paq${s.dest ? ' dest' : ''}`}>
+            {s.dest && <span class="tag">La más elegida</span>}
+            <h3>{s.n}</h3>
+            <p class="precio">{s.precio}</p>
+            <p class="dur">{s.dur}</p>
+            <ul>{s.incluye.map((i) => <li>{i}</li>)}</ul>
+            <p class="no">{s.no}</p>
+            <a class="btn btn-pri" style="width:100%;justify-content:center;margin-top:.8rem" href={`${CONTACTO.whatsappTexto.replace('Hola, quiero información', 'Hola, quiero la sesión de ' + s.n + '. Información')}`}>Reservar {s.n}</a>
+          </article>
+        ))}
+      </div>
+      <p style="margin-top:1.2rem"><a href={`${base}/sesiones/`}>Comparar las sesiones a detalle →</a></p>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="wrap">
+      <div class="consent">
+        <h2>Nada se hace sin tu permiso</h2>
+        <p>Antes de cada paso te preguntamos si estás de acuerdo, con palabras claras y tiempo para decidir. Tu cuerpo también responde a su manera, y eso lo observamos con respeto: respiración que se hace profunda, calor en las manos, hormigueo, un suspiro largo, una emoción que aparece, una tensión que se suelta.</p>
+        <p>No interpretamos esas respuestas como diagnósticos. Las anotamos y te las devolvemos al final, para que tú decidas qué hacer con esa información.</p>
+        <div class="chips">
+          <span class="chip">Consentimiento por fase</span>
+          <span class="chip">Puedes detenerte en cualquier momento</span>
+          <span class="chip">Sin imposición de creencias</span>
+          <span class="chip">Confidencialidad</span>
+          <span class="chip">En línea y presencial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="wrap creadora">
+      <div class="marco"><img src={`${base}/img/colibri.webp`} alt="Colibrí ornamental" width="1024" height="1024" /></div>
+      <div>
+        <p class="kicker">La creadora del método</p>
+        <h2>Lic. Dra. Rosa Patricia Alvarado Moreno</h2>
+        <p>Creadora del Método Convergencia, donde el Reiki, la inducción personal y el lenguaje de la física cuántica se tejen en un solo acompañamiento. Su trabajo parte de una idea sencilla y exigente: nadie puede ser sanado en contra de su voluntad ni sin comprender qué se le está proponiendo.</p>
+        <p>Por eso cada persona responde un cuestionario, cada sesión pide permiso antes de avanzar y cada caso se revisa de forma personal antes de aceptarse.</p>
+        <a class="btn btn-sec" href={`${base}/metodo/`}>Conocer el método</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="wrap">
+      <p class="kicker">Dudas honestas</p>
+      <h2>Lo que conviene saber antes</h2>
+      <div style="margin-top:1.4rem">
+        {FAQ.map((f) => (
+          <details><summary>{f.q}</summary><p>{f.a}</p></details>
+        ))}
+      </div>
+      <div class="disclaimer" style="margin-top:1.2rem">
+        <strong>Aviso claro:</strong> este es un acompañamiento de bienestar. No diagnostica, no trata ni cura enfermedades y no sustituye a tu médico. Si tienes una condición de salud, un embarazo o estás en tratamiento, consúltalo con tu profesional de salud y cuéntanoslo antes de agendar.
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="wrap" style="text-align:center">
+      <div class="orn"><span>✦ ✦ ✦</span></div>
+      <h2>¿Empezamos por una conversación?</h2>
+      <p style="max-width:36rem;margin-inline:auto">La primera charla es sin costo y sin compromiso. Escríbenos, responde el cuestionario si ya quieres avanzar, o visítanos en el consultorio.</p>
+      <div class="btns" style="justify-content:center">
+        <a class="btn btn-pri" href={CONTACTO.whatsappTexto}>Escribir por WhatsApp</a>
+        <a class="btn btn-sec" href={CONTACTO.telefono}>Llamar {CONTACTO.telefonoTexto}</a>
+        <a class="btn btn-sec" href={`${base}/cita/`}>Ver cómo llegar</a>
+      </div>
+    </div>
+  </section>
+</Base>

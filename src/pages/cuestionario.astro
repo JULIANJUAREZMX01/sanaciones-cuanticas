@@ -1,0 +1,57 @@
+---
+import Base from '@/layouts/Base.astro';
+import { PREGUNTAS, CONTACTO } from '@/data/contenido.ts';
+---
+<Base title="Cuestionario de primer encuentro · 30 preguntas" description="Treinta preguntas para conocerte antes de la primera sesión: tu malestar, tu estado actual, tus creencias y tu compromiso.">
+  <section class="bloque" style="padding-top:clamp(1.6rem,4vw,3rem)">
+    <div class="wrap">
+      <p class="kicker">Primer encuentro</p>
+      <h1>Treinta preguntas antes de empezar</h1>
+      <p class="lead" style="max-width:42rem">No es un trámite: es la diferencia entre una sesión genérica y una inducción hecha para ti. Tómate el tiempo que necesites. Nada se envía a ningún servidor: tus respuestas se arman en tu teléfono y se envían por WhatsApp cuando tú decides.</p>
+      <div class="disclaimer" style="margin-top:1rem">Al enviar, tu solicitud entra a <strong>pre-aprobación</strong> y después a la <strong>aprobación final</strong> de la Lic. Dra. Rosa Patricia Alvarado Moreno. No toda solicitud se acepta, y si no es buen momento te lo diremos con claridad.</div>
+    </div>
+  </section>
+  <section class="bloque">
+    <div class="wrap">
+      <form id="q" novalidate>
+        {PREGUNTAS.map((b, bi) => (
+          <div class="bloqueq">
+            <h3>{b.bloque}</h3>
+            {b.items.map((item, i) => (
+              <div class="campo">
+                <label for={`p${bi}_${i}`}>{item}</label>
+                <textarea id={`p${bi}_${i}`} data-q={item} rows={item.length > 60 ? 2 : 1}></textarea>
+              </div>
+            ))}
+          </div>
+        ))}
+        <div class="bloqueq">
+          <h3>6. Confirmaciones</h3>
+          <div class="campo"><label><input type="checkbox" id="c1" /> Entiendo que este acompañamiento no sustituye atención médica.</label></div>
+          <div class="campo"><label><input type="checkbox" id="c2" /> Acepto que se me pregunte antes de cada fase y que puedo detenerme cuando quiera.</label></div>
+          <div class="campo"><label><input type="checkbox" id="c3" /> Autorizo que me contacten por WhatsApp al número que dejé.</label></div>
+          <button type="submit" class="btn btn-pri" style="margin-top:.6rem">Enviar por WhatsApp</button>
+          <p style="font-size:.82rem;margin-top:.7rem">Se abrirá tu WhatsApp con todas tus respuestas escritas. Solo tú decides enviarlas.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script is:inline define:vars={{ wa: CONTACTO.whatsapp }}>
+    const form = document.getElementById('q');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const partes = [];
+      document.querySelectorAll('[data-q]').forEach((el) => {
+        const v = (el.value || '').trim();
+        if (v) partes.push('• ' + el.dataset.q + '\n' + v);
+      });
+      const c1 = document.getElementById('c1')?.checked ? 'sí' : 'no';
+      const c2 = document.getElementById('c2')?.checked ? 'sí' : 'no';
+      const c3 = document.getElementById('c3')?.checked ? 'sí' : 'no';
+      const cabecera = 'CUESTIONARIO DE PRIMER ENCUENTRO — Sanaciones Cuánticas Energéticas\n\n';
+      const pie = `\n\nCONFIRMACIONES\nNo sustituye atención médica: ${c1}\nAcepta consentimiento por fases: ${c2}\nAutoriza contacto por WhatsApp: ${c3}`;
+      const texto = cabecera + partes.join('\n\n') + pie;
+      window.open(wa + '?text=' + encodeURIComponent(texto), '_blank');
+    });
+  </script>
+</Base>
