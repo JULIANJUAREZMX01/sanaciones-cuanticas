@@ -7,43 +7,44 @@ export const CONTACTO = {
 };
 
 export const PILARES = [
-  { ico: '🌊', t: 'Método Yujuen', c: 'pilar', d: 'La base de todo el procedimiento. Se trabaja con presencia sostenida, silencio y atención plena: nadie empuja, nada se fuerza. De ahí se derivan la inducción personal y la lectura energética de cada persona.' },
-  { ico: '🌀', t: 'Inducción personal', c: 'pilar j', d: 'Tu propia voz te guía: respiración, imaginería y frases que tú reconoces como tuyas. Nada de guiones ajenos. La inducción se adapta a tu historia y a tu ritmo.' },
-  { ico: '✨', t: 'Lenguaje cuántico', c: 'pilar c', d: 'Hablamos de partículas enlazadas y de lo que se mantiene conectado a la distancia como metáfora de vínculo y presencia. No afirmamos que la física cuántica cure: afirmamos que nombrar la conexión ayuda a sostenerla.' },
+  { ico: '🌊', t: 'Método Yujuen', c: 'pilar', d: 'La base de presencia del procedimiento: silencio sostenido, atención plena y respiración lenta. Nadie empuja y nada se fuerza. De ahí se derivan la inducción personal y el enlace con la persona.' },
+  { ico: '✋', t: 'Interrogación al cuerpo', c: 'pilar j', d: 'La terapeuta pregunta con sus dedos, a distancia, al cuerpo de la persona: sí o no. El cuerpo responde con movimientos finos que ella interpreta. No se le pregunta a la mente: se le pregunta al cuerpo.' },
+  { ico: '✨', t: 'Lenguaje cuántico', c: 'pilar c', d: 'Hablamos de partículas enlazadas y de lo que permanece conectado a la distancia como metáfora de vínculo y presencia. No afirmamos que la física cuántica cure: afirmamos que nombrar la conexión ayuda a sostenerla.' },
 ];
 
 export const FASES = [
-  { t: 'Primera conversación', d: 'Nos conocemos sin costo. Escucho qué te trae, qué esperas y qué te da miedo. Se resuelven dudas y se explica el procedimiento completo.' },
-  { t: 'Cuestionario de primer encuentro', d: 'Treinta preguntas para conocer tu malestar, tu estado actual, tus creencias y el motivo real por el que quieres empezar. Se responde en línea o en el consultorio.' },
-  { t: 'Pre-aprobación y aprobación', d: 'El acompañante revisa tu cuestionario y la Lic. Dra. Rosa Patricia Alvarado Moreno da la aprobación final. No toda persona ni todo momento son adecuados para este trabajo, y eso es parte del cuidado.' },
-  { t: 'Consentimiento paso por paso', d: 'Antes de cada fase se te pregunta si estás de acuerdo. Si dices no, se detiene. Se te explica qué sigue, qué puedes sentir y cómo salir si lo necesitas.' },
-  { t: 'Inducción y acompañamiento', d: 'Voz guiada, presencia Yujuen y silencio sostenido. Observamos y anotamos tus respuestas involuntarias: respiración, calor, hormigueo, emoción, tensión que se suelta.' },
-  { t: 'Cierre y seguimiento', d: 'Te vas con lo que sentiste por escrito y con una pauta de cuidado para cuarenta y ocho horas. Se agenda seguimiento a los tres días.' },
+  { t: '1 · Escucha sin prisa', d: 'Primero hablas tú. Cuentas todo lo que sientes, sin orden y sin filtro: lo que duele, lo que preocupa, lo que no has dicho en otro lado. Aquí no se interrumpe ni se corrige.' },
+  { t: '2 · Enlace energético', d: 'Cuando terminas de hablar, se pide permiso y se conecta la energía de la terapeuta con la tuya. A partir de este punto el trabajo es con tu cuerpo, no con tus palabras.' },
+  { t: '3 · Interrogación al cuerpo', d: 'Con sus dedos, la terapeuta pregunta a distancia al cuerpo: sí o no. El cuerpo contesta con movimientos finos que ella interpreta; la persona no tiene que saber nada ni hacer nada.' },
+  { t: '4 · Catálogo de sistemas y orígenes', d: 'Se recorre un catálogo de enfermedades y sistemas preguntándole al cuerpo si eso es lo que tiene, y de dónde viene: si el origen es emocional, psicológico, físico o energético. Todo se le pregunta al cuerpo, no a la persona.' },
+  { t: '5 · Guía de sanación holística', d: 'Con las respuestas obtenidas se guía a la persona por un proceso de sanación emocional y psicológica de forma holística: palabra, respiración, silencio y presencia.' },
+  { t: '6 · Integración con el cuestionario', d: 'Lo que el cuerpo respondió se cruza con las treinta respuestas que la persona dio antes por escrito. Una es la versión de la persona; la otra, la del cuerpo. El cruce es lo que da profundidad.' },
+  { t: '7 · El diagnóstico es del paciente', d: 'La terapeuta no diagnostica: conduce y traduce. El paciente y su cuerpo llegan a su propio diagnóstico y sale a flote el origen real del malestar.' },
 ];
 
 export const SESIONES = [
   {
     n: 'Armonización',
-    precio: '$600',
-    dur: '60 minutos · en línea o a distancia',
+    precio: '$700',
+    dur: '90 minutos · una sesión por semana',
     dest: false,
-    incluye: ['Cuestionario de primer encuentro', 'Inducción guiada en vivo', 'Presencia Yujuen a distancia con tu permiso', 'Nota de cierre con lo observado'],
-    no: 'No incluye seguimiento posterior ni sesiones adicionales.',
+    incluye: ['Cuestionario de primer encuentro', 'Escucha inicial completa y enlace energético', 'Interrogación al cuerpo sobre el motivo principal', 'Guía de respiración y cierre con lo observado'],
+    no: 'No incluye el catálogo completo de sistemas ni seguimiento posterior.',
   },
   {
     n: 'Sesión profunda',
     precio: '$900',
-    dur: '90 minutos + 2 seguimientos',
+    dur: '2 horas · una sesión por semana',
     dest: true,
-    incluye: ['Todo lo de Armonización', 'Inducción personal escrita para tu caso', 'Presencia Yujuen extendida, presencial o a distancia', 'Dos mensajes de seguimiento en 72 horas', 'Ejercicios de respiración para casa'],
-    no: 'No incluye acompañamiento continuo por meses.',
+    incluye: ['Todo lo de Armonización', 'Catálogo completo de sistemas y orígenes', 'Interrogación extendida al cuerpo, a distancia', 'Guía holística de sanación emocional y psicológica', 'Seguimientos a las 72 horas'],
+    no: 'No incluye acompañamiento de varios meses ni intervención en tratamientos médicos.',
   },
   {
     n: 'Programa Convergencia',
-    precio: '$1,200',
-    dur: 'Cuatro sesiones de 60 min · un mes',
+    precio: '$2,400',
+    dur: 'Cuatro sesiones semanales de 90 a 120 min',
     dest: false,
-    incluye: ['Cuatro encuentros completos', 'Inducción personalizada que evoluciona contigo', 'Acompañamiento por WhatsApp entre sesiones', 'Cuestionario de cierre y comparativa de tu estado inicial', 'Pauta de cuidado para el mes'],
+    incluye: ['Cuatro encuentros semanales completos', 'Cuestionario inicial y cruce con las respuestas del cuerpo', 'Catálogo completo en cada encuentro', 'Acompañamiento por WhatsApp entre sesiones', 'Comparativa de estado y pauta de cuidado al cierre'],
     no: 'No incluye atención de urgencias ni intervención en tratamientos médicos.',
   },
 ];
@@ -72,15 +73,16 @@ export const PREGUNTAS: { bloque: string; items: string[] }[] = [
     '¿Qué días y horarios te acomodan?', '¿Cuál de las tres sesiones consideras posible para ti?',
     '¿Aceptas que este acompañamiento no sustituye atención médica?',
     '¿Aceptas que se te pregunte antes de cada fase y que puedas detener el proceso?',
-    '¿Cómo prefieres que te contactemos?', '¿Qué resultado, para ti, sería suficiente para decir que valió la pena?',
+    '¿Entiendes que en la sesión se le pregunta a tu cuerpo y no a tu mente?',
+    '¿Qué resultado, para ti, sería suficiente para decir que valió la pena?',
   ]},
 ];
 
 export const FAQ = [
   { q: '¿Esto cura enfermedades?', a: 'No. Es un acompañamiento de bienestar que busca relajación profunda, alivio del estrés y una sensación de integración. No diagnostica, no trata ni cura enfermedades y no sustituye a tu médico.' },
-  { q: '¿Qué significa “cuántico” aquí?', a: 'Usamos el lenguaje de la física cuántica como metáfora de la conexión entre personas y de la presencia a distancia. No sostenemos que partículas enlazadas te curen: sería deshonesto y no hay evidencia de eso.' },
-  { q: '¿Qué pasa si no sé si creo en esto?', a: 'Está bien. La duda es bienvenida y de hecho ayuda: trabajamos con lo que sientes, no con lo que deberías creer.' },
-  { q: '¿Puedo detener la sesión?', a: 'Sí, en cualquier momento y sin explicaciones. Antes de cada fase se te pregunta si estás de acuerdo, y tu no se respeta.' },
-  { q: '¿Por qué hay que responder treinta preguntas?', a: 'Porque sin conocerte, cualquier inducción es genérica. El cuestionario permite adaptar la sesión y decidir con responsabilidad si es buen momento para ti.' },
-  { q: '¿Quién aprueba mi solicitud?', a: 'Dos filtros: una pre-aprobación del acompañante y la aprobación final de la Lic. Dra. Rosa Patricia Alvarado Moreno, creadora del método.' },
+  { q: '¿Por qué se le pregunta al cuerpo y no a la persona?', a: 'Porque la persona ya contó su versión en el cuestionario y en la escucha inicial. La segunda versión, la del cuerpo, no pasa por el filtro de la mente ni por el miedo: sale directa en forma de respuestas que la terapeuta lee.' },
+  { q: '¿El método es inventado?', a: 'El Método Convergencia no inventa una técnica. Entrelaza métodos que ya existen y funcionan, como quien revisa una computadora componente por componente hasta encontrar qué consume la energía del sistema. La convergencia sí es propia: el orden, el catálogo de preguntas y la lectura de respuestas.' },
+  { q: '¿Quién da el diagnóstico?', a: 'El paciente y su cuerpo. La terapeuta no diagnostica ni decide: conduce el proceso y traduce lo que el cuerpo responde, para que el origen del malestar salga a flote desde dentro.' },
+  { q: '¿Cuánto dura y cada cuándo?', a: 'Cada sesión va de noventa minutos a dos horas, y el ritmo natural es una sesión por semana: tiempo suficiente para que el cuerpo procese y no tanto como para perder el hilo.' },
+  { q: '¿Cuánto cuesta?', a: 'La primera conversación no tiene costo. Las sesiones van de $700 a $900, y el Programa Convergencia de cuatro encuentros semanales cuesta $2,400.' },
 ];
